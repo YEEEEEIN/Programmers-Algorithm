@@ -1,4 +1,4 @@
-package Day230513;
+package 옹알이;
 
 class Solution {
 	public int solution(String[] babbling) {
