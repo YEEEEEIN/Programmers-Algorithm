@@ -6,17 +6,14 @@ package ss;
 
 class Solution {
 	public int solution(int[] common) {
+		// 런타임 error 수정
 		int answer = 0;
-		int a = common[2] - common[1];
-		int b = common[1] - common[0];
-		int c = common[1] / common[0];
-		
-		if (a == b) { // 등차 수열
-			answer = common[common.length - 1] + a;
-		} else { // 등비 수열
-			answer = common[common.length - 1] * c;
-		}
-		return answer;
+        if(common[2] - common[1] == common[1] - common[0]){ // 등차 수열
+            answer = common[common.length - 1] + (common[1] - common[0]);
+        } else { // 등비 수열
+            answer = common[common.length - 1] * (common[1] / common[0]);
+        }
+        return answer;
         
 	}
 
